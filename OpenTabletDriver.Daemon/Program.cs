@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using OpenTabletDriver.Desktop;
 using OpenTabletDriver.Desktop.RPC;
+using OpenTabletDriver.Devices.Serial;
 using OpenTabletDriver.Plugin;
 using OpenTabletDriver.Plugin.Components;
 
@@ -182,6 +183,7 @@ namespace OpenTabletDriver.Daemon
                 {
                     serviceCollection.AddSingleton<IDeviceConfigurationProvider, DesktopDeviceConfigurationProvider>();
                     serviceCollection.AddSingleton<IReportParserProvider, DesktopReportParserProvider>();
+                    serviceCollection.AddSingleton<ISerialDeviceConfigurationProvider, DesktopSerialDeviceConfigurationProvider>();
                 })
                 .Build<Driver>(out _)
             );

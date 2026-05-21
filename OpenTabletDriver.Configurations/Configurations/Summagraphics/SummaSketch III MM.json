@@ -1,0 +1,29 @@
+{
+  "Name": "Summagraphics SummaSketch III (MM)",
+  "Specifications": {
+    "Digitizer": {
+      "Width": 304.8,
+      "Height": 304.8,
+      "MaxX": 12000,
+      "MaxY": 12000
+    },
+    "Pen": {
+      "MaxPressure": 0,
+      "ButtonCount": 4
+    }
+  },
+  "DigitizerIdentifiers": [
+    {
+      "VendorID": 65534,
+      "ProductID": 1,
+      "InputReportLength": 5,
+      "ReportParser": "OpenTabletDriver.Configurations.Parsers.Summagraphics.SummaSketchMMReportParser",
+      "DeviceStrings": {
+        "0": "^SummaSketchIIIMM$"
+      }
+    }
+  ],
+  "Attributes": {
+    "VerifiedLPI": "1000"
+  }
+}

@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using OpenTabletDriver.ComponentProviders;
 using OpenTabletDriver.Configurations;
 using OpenTabletDriver.Devices;
+using OpenTabletDriver.Devices.Serial;
 using OpenTabletDriver.Plugin.Components;
 
 namespace OpenTabletDriver
@@ -16,6 +17,7 @@ namespace OpenTabletDriver
             ServiceDescriptor.Singleton<IDeviceHubsProvider, DeviceHubsProvider>(serviceProvider => new DeviceHubsProvider(serviceProvider)),
             ServiceDescriptor.Singleton<ICompositeDeviceHub, RootHub>(RootHub.WithProvider),
             ServiceDescriptor.Singleton<IDeviceConfigurationProvider, DeviceConfigurationProvider>(),
+            ServiceDescriptor.Singleton<ISerialDeviceConfigurationProvider, EmptySerialDeviceConfigurationProvider>(),
         ];
 
         public DriverServiceCollection()
